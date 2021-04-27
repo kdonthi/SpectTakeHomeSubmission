@@ -60,10 +60,10 @@ func needs_extra_driver(drivers [][]int, min_time int, max_time int, ride_time i
 	}
 
 	for _, driverSchedule := range(drivers) {
+		if len(driverSchedule) == 0 { //if any fully free drivers, then we are all taken care of
+			return false
+		}
 		for passenger := 0; passenger < len(driverSchedule); passenger++ {
-			if len(driverSchedule) == 0 {
-				return false
-			}
 			if passenger == 0 {
 				for recovery := 0; recovery < driverSchedule[0]; recovery++ {
 					if !times[recovery] {
