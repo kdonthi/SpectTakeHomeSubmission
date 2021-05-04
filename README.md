@@ -1,4 +1,4 @@
-# SpectTakeHomeSubmission
+# Passenger Pickup Algorithm
 
 ## Introduction
 The goal of this program is to take in passenger times, in minutes, and output a list of lists with the minimum number of drivers and each driver's pickup schedule. 
